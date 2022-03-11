@@ -4,6 +4,7 @@ const openseaUrl = "https://testnets.opensea.io/assets/greenalians?embed=true";
 export default function RarityComp() {
   return (
     <iframe
+      title="myFrame"
       src={openseaUrl}
       style={{
         minHeight: "89vh",

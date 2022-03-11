@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+const openseaLogo = "../../asset/images/opensea.png";
 
 export default function Header() {
   return (
@@ -332,14 +333,11 @@ export default function Header() {
           <a
             className="u-social-url"
             target="_blank"
-            title="Rarible"
-            href="https://rarible.com/womenrise"
+            title="Opensea"
+            href="https://testnets.opensea.io/collection/greenalians"
           >
             <span className="u-file-icon u-icon u-social-custom u-social-icon u-text-black u-icon-5">
-              <img
-                src="https://womenrise.art/images/RaribleLogo_Black.png"
-                alt=""
-              />
+              <img src={openseaLogo} alt="" />
             </span>
           </a>
         </div>

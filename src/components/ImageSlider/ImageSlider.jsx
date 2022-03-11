@@ -53,6 +53,7 @@ export default function ImageSlider() {
           href="https://discord.com/invite/X5Ut9u7MGW"
           className="u-align-center u-btn u-btn-round u-button-style u-radius-6 u-text-white u-btn-1"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Join Discord
         </a>
@@ -60,6 +61,7 @@ export default function ImageSlider() {
           href="https://twitter.com/WomenriseNFT"
           className="u-align-center u-btn u-btn-round u-button-style u-radius-6 u-text-white u-btn-2"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Join Twitter
         </a>

@@ -20,7 +20,7 @@ export default function Faq() {
               aria-selected="false"
               href="https://womenrise.art/"
             >
-              <span className="u-accordion-link-text">What is Womens NFT?</span>
+              <span className="u-accordion-link-text">What is Alians NFT?</span>
               <span className="u-accordion-link-icon u-icon u-icon-circle u-text-white u-icon-1">
                 <svg
                   className="u-svg-link"
@@ -54,8 +54,8 @@ export default function Faq() {
                 <div className="fr-view u-clearfix u-rich-text u-text">
                   <h6>
                     <span className="u-text-body-alt-color">
-                      Womens NFT is a collection of 10,000 randomly generated
-                      and unique NFT art pieces created by the internationally
+                      Alians NFT is a collection of 250 randomly generated and
+                      unique NFT art pieces created by the internationally
                       acclaimed visual artist Maliha Abidi.
                     </span>
                   </h6>
@@ -110,11 +110,10 @@ export default function Faq() {
                     <span className="u-text-body-alt-color">
                       Our mission is to build a community of like-minded people
                       through this project, to give back to the community and to
-                      invite more women into the space. Also, to contribute to
-                      the representation of women in tech, in blockchain and in
-                      the NFT space so the current and the future girls and
-                      women in this space can see themselves be represented
-                      here.
+                      invite more people into the space. Also, to contribute to
+                      the representation of human in tech, in blockchain and in
+                      the NFT space so the current and the future people in this
+                      space can see themselves be represented here.
                     </span>
                   </h6>
                 </div>
@@ -167,7 +166,7 @@ export default function Faq() {
                   <h6>
                     <span className="u-text-body-alt-color">
                       Our commitment to the community goes beyond the NFT world
-                      which is why another essential goal of Womens NFT is to
+                      which is why another essential goal of Alians NFT is to
                       contribute to the gender equality causes in the real world
                       which is why 7.5% of the proceeds will go to global
                       organisations that are fighting for girl’s education
@@ -228,9 +227,9 @@ export default function Faq() {
                       className="u-custom-font u-text-font"
                       style={{ fontSize: "1rem" }}
                     >
-                      Women education is a cause very close to our hearts. In
-                      the words of Adelaide Hoodless “Educate a boy, and you
-                      educate an individual. Educate a girl, and you educate a
+                      Education is a cause very close to our hearts. In the
+                      words of Adelaide Hoodless “Educate a boy, and you educate
+                      an individual. Educate a girl, and you educate a
                       community.” How true! Through her art and published books,
                       Maliha has been bringing attention to this topic for years
                       and has made a lasting impression across
@@ -261,7 +260,7 @@ export default function Faq() {
                       className="u-custom-font u-text-font"
                       style={{ fontSize: "1rem" }}
                     >
-                      5% of royalties will be used to support the 'Womens NFT'
+                      5% of royalties will be used to support the 'Alians NFT'
                       club and the 'Activist' club on an ongoing basis.
                     </span>
                   </h6>
@@ -315,7 +314,7 @@ export default function Faq() {
                 <div className="fr-view u-clearfix u-rich-text u-text">
                   <h6>
                     <span className="u-custom-font u-text-font">
-                      Total number of art pieces — 10,000.
+                      Total number of art pieces — 250.
                     </span>
                   </h6>
                 </div>
@@ -367,7 +366,7 @@ export default function Faq() {
                 <div className="fr-view u-clearfix u-rich-text u-text">
                   <h6>
                     <span className="u-custom-font u-text-font">
-                      Each artwork will cost — 0.07 ETH + Gas Fee
+                      Each artwork will cost — 0.1 ETH + Gas Fee
                     </span>
                   </h6>
                 </div>
@@ -572,7 +571,7 @@ export default function Faq() {
                     <span style={{ fontSize: "1rem" }}>
                       <span className="u-custom-font u-text-font">
                         1- Contributing to gender equality in the NFT world
-                        through increased representation of women.&nbsp;
+                        through increased representation of people.&nbsp;
                       </span>
                     </span>
                   </h6>
@@ -582,8 +581,7 @@ export default function Faq() {
                         2- Providing financial means (through donations) to
                         worthy causes that align with SDG 17 goals such as
                         supporting girls education and women's rights. This will
-                        contribute to economic empowerment of women and
-                        girls.&nbsp;
+                        contribute to economic empowerment of humans.&nbsp;
                       </span>
                     </span>
                   </h6>
@@ -602,73 +600,8 @@ export default function Faq() {
               </div>
             </div>
           </div>
+
           <div className="u-accordion-item u-accordion-item-10">
-            <a
-              className="u-accordion-link u-active-custom-color-3 u-border-2 u-border-active-grey-75 u-border-grey-75 u-border-hover-grey-75 u-button-style u-custom-color-2 u-hover-custom-color-3 u-accordion-link-10"
-              id="link-accordion-854e"
-              style={{ textDecoration: "none" }}
-              aria-controls="accordion-854e"
-              aria-selected="false"
-              href="https://womenrise.art/"
-            >
-              <span className="u-accordion-link-text"> What is Rise book?</span>
-              <span className="u-accordion-link-icon u-icon u-icon-circle u-text-white u-icon-1">
-                <svg
-                  className="u-svg-link"
-                  preserveAspectRatio="xMidYMin slice"
-                  viewBox="0 0 42 42"
-                  style={{}}
-                >
-                  <use
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    xlinkHref="#svg-b2e4"
-                  />
-                </svg>
-                <svg
-                  className="u-svg-content"
-                  viewBox="0 0 42 42"
-                  x="0px"
-                  y="0px"
-                  id="svg-b2e4"
-                  style={{ enableBackground: "new 0 0 42 42" }}
-                >
-                  <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 "></polygon>
-                </svg>
-              </span>
-            </a>
-            <div
-              className="u-accordion-pane u-border-1 u-border-grey-75 u-border-no-top u-container-style u-shape-rectangle u-accordion-pane-10"
-              id="accordion-854e"
-              aria-labelledby="link-accordion-854e"
-            >
-              <div className="u-container-layout u-container-layout-10">
-                <div className="fr-view u-clearfix u-rich-text u-text">
-                  <h6>
-                    <span
-                      className="u-custom-font u-text-font"
-                      style={{ fontSize: "1rem" }}
-                    >
-                      The book ‘RISE’ celebrates stories of 100 extraordinary
-                      women of colour from around the world who made history. It
-                      is illustrated and authored by our very own Maliha Abidi!
-                      The book was published on the 4th of November 2021.
-                    </span>
-                  </h6>
-                  <h6>
-                    <span
-                      className="u-custom-font u-text-font"
-                      style={{ fontSize: "1rem" }}
-                    >
-                      At 50% sold milestone signed copies will be delivered to
-                      100 randomly selected Womens NFT NFT collectors. Early
-                      supporters, we see you!
-                    </span>
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="u-accordion-item u-accordion-item-11">
             <a
               className="u-accordion-link u-active-custom-color-3 u-border-2 u-border-active-grey-75 u-border-grey-75 u-border-hover-grey-75 u-button-style u-custom-color-2 u-hover-custom-color-3 u-accordion-link-11"
               id="link-accordion-854e"
@@ -711,11 +644,11 @@ export default function Faq() {
             >
               <div className="u-container-layout u-container-layout-11">
                 <div className="fr-view u-clearfix u-rich-text u-text">
-                  <h6>Total number of tokens 10,000.</h6>
-                  <h6>200 (giveaways, marketing and team).</h6>
-                  <h6>
+                  <h6>Total number of tokens 250.</h6>
+                  <h6>20 (giveaways, marketing and team).</h6>
+                  {/* <h6>
                     Ethereum blockchain as ERC-721 tokens and hosted on IPFS.
-                  </h6>
+                  </h6> */}
                 </div>
               </div>
             </div>
