@@ -58,7 +58,6 @@ export default function Owners() {
                     href="https://twitter.com/Maliha_z_Art"
                     title="Twitter"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span className="u-icon u-icon-circle u-social-icon u-social-twitter u-text-grey-5 u-icon-1">
                       <svg
@@ -86,7 +85,6 @@ export default function Owners() {
                   <a
                     className="u-social-url"
                     target="_blank"
-                    rel="noopener noreferrer"
                     href="https://www.instagram.com/maliha_z_art/"
                     title="Insta"
                   >
@@ -118,7 +116,6 @@ export default function Owners() {
                   <a
                     className="u-social-url"
                     target="_blank"
-                    rel="noopener noreferrer"
                     title="Tiktok"
                     href="https://www.tiktok.com/@malihazart"
                   >
@@ -146,7 +143,6 @@ export default function Owners() {
                   <a
                     className="u-social-url"
                     target="_blank"
-                    rel="noopener noreferrer"
                     title="Website"
                     href="https://www.malihaabidi.com"
                   >
@@ -203,7 +199,6 @@ export default function Owners() {
                     href="https://twitter.com/cryptosodi"
                     title="Twitter"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span className="u-icon u-icon-circle u-social-icon u-social-twitter u-text-grey-5 u-icon-5">
                       <svg
@@ -266,7 +261,6 @@ export default function Owners() {
                     href="https://twitter.com/Aski1787"
                     title="Twitter"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <span className="u-icon u-icon-circle u-social-icon u-social-twitter u-text-grey-5 u-icon-6">
                       <svg

@@ -31,7 +31,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
                     href="https://www.reuters.com/article/tech-women-crypto-currency-idUKL8N2RG0I2?fbclid=IwAR3uuZ9DoAk_o9VibUsvEXyPH9LUiHXik6KBkRVLv38sQgSZKTv2gy2jRVY"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     Read More
                   </a>
@@ -60,7 +59,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2"
                     href="https://amp.theguardian.com/global-development/2021/oct/11/day-of-the-girl-is-critical-but-support-is-needed-year-round-say-campaigners?fbclid=IwAR3fNqwbKLZ1pmR0gYD-8P7n6SM3STXr1oDgs0lJ9wyfkVG1RZ-eamwb-O4"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
@@ -91,7 +89,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3"
                     href="https://www.vanityfair.com/london/2021/07/the-rise-and-rise-of-nft-artworks"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
@@ -122,7 +119,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4"
                     href="https://www.rollingstone.com/culture-council/articles/community-secret-nft-success-1283244/"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
@@ -159,7 +155,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5"
                     href="https://www.scmp.com/business/banking-finance/article/3161091/how-artists-cryptocurrency-exchanges-are-using-nft-sales"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
@@ -192,7 +187,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6"
                     href="https://cointelegraph.com/news/nfts-of-empowered-women-aim-to-drive-female-engagement-in-crypto"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
@@ -224,7 +218,6 @@ export default function ListedOn() {
                     className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7"
                     href="https://hercircle.in/engage/get-inspired/achievers/Decoding-The-Basics-Of-NFTs-with-Crypto-Queen-Maliha-Abidi-1665.html?fbclid=IwAR124QWL5dVvePfqP4vuOIQIg4gSsG_kOaSo_342M_0y2r8DsTvMFK0Db40"
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {" "}
                     Read More
