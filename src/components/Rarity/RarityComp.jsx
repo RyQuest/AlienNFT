@@ -36,7 +36,7 @@ export default function RarityComp() {
 
   useEffect(() => {
     setCollectionData({ ...collectionData, loading: true });
-    getData(1, 10, catagory, sortBy);
+    getData(1, 250, catagory, sortBy);
   }, [catagory, sortBy]);
   return (
     <div

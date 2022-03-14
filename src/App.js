@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Rarity from "./pages/Rarity";
-import Licence from "./pages/Licence";
+import Licence from "./pages/ItemDetail";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Header from "./components/Header/Header";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rarity" element={<Rarity />} />
-        <Route path="/licence" element={<Licence />} />
+        <Route path="/item-detail" element={<ItemDetail />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       {/* <Footer /> */}
