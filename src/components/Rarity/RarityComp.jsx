@@ -41,7 +41,7 @@ export default function RarityComp() {
     <div
       className=""
       style={{
-        maxWidth: "72em",
+        // maxWidth: "72em",
         minHeight: "100%",
         backgroundColor: "rgb(47 188 170)",
         textShadow: "0 .05rem .1rem rgba(0,0,0,.5)",
