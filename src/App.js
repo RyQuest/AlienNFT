@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import "./asset/css/Home.css";
 import "./asset/css/Licence.css";
 import "./asset/css/nicepage.css";
+import "./asset/css/Rarity.css";
 
 function App() {
   return (

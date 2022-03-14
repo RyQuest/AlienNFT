@@ -9,7 +9,7 @@ export default function Banner() {
       id="carousel_0516"
       data-image-width="9281"
       data-image-height="2916"
-      // style={{ height: "2916", width: "9281" }}
+      style={{ height: "2916", width: "9281" }}
     ></section>
   );
 }
