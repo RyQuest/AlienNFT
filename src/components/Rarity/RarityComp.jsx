@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
+import "../../asset/css/Rarity.css";
 
 const url = "http://localhost:3001/users/content";
 
@@ -54,7 +55,7 @@ export default function RarityComp() {
       }}
     >
       <form className="search text-center" action="/search-result">
-        <fieldset>
+        <fieldset style={{ border: "0" }}>
           <input
             className="search-text-input"
             type="text"

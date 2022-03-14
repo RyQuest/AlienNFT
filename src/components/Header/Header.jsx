@@ -10,7 +10,10 @@ export default function Header() {
       id="sec-197f"
     >
       <div className="u-clearfix u-sheet u-sheet-1">
-        <nav className="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <nav
+          className="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1"
+          style={{ opacity: "1" }}
+        >
           <div
             className="menu-collapse u-custom-font u-font-raleway"
             style={{
