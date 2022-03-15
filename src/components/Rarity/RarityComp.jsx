@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
-import "../../asset/css/Rarity.css";
 
-const url = "http://localhost:3001/users/content";
+const url = "http://localhost:3002/users/content";
 
 export default function RarityComp() {
   const [catagory, setCatagory] = useState("");
@@ -38,12 +37,13 @@ export default function RarityComp() {
     setCollectionData({ ...collectionData, loading: true });
     getData(1, 250, catagory, sortBy);
   }, [catagory, sortBy]);
+  console.log(",,,,,,", catagory);
   return (
     <div
       className=""
       style={{
         // maxWidth: "72em",
-        minHeight: "100%",
+        minHeight: "100vh",
         backgroundColor: "rgb(47 188 170)",
         textShadow: "0 .05rem .1rem rgba(0,0,0,.5)",
         boxShadow: "inset 0 0 5rem rgba(0,0,0,.5)",
@@ -85,39 +85,19 @@ export default function RarityComp() {
           Trait Filter (<span id="trait-fileter-selected-num">0</span>)
         </a>
         <div>
-          <select id="sorting-select" className="form-select" name="order_by">
-            <option value="rarity" selected>
+          <select
+            id="sorting-select"
+            className="form-select"
+            name="order_by"
+            onChange={(e) => setCatagory(e.target.value)}
+          >
+            <option value="Edition" selected>
               Sort By Rarity
             </option>
             <option value="id">Sort By ID</option>
           </select>
         </div>
-        <div>
-          <div
-            className="form-check form-switch"
-            style={{
-              width: "12rem",
-              marginLeft: "auto",
-              marginRight: "auto",
-              fontSize: "1rem",
-              lineHeight: "30px",
-              marginTop: "15px",
-            }}
-          >
-            <input
-              style={{ height: "25px", width: "40px" }}
-              className="form-check-input"
-              type="checkbox"
-              id="traitNormalization"
-            />
-            <label
-              className="form-check-label text-white"
-              htmlFor="traitNormalization"
-            >
-              Trait Normalization
-            </label>
-          </div>
-        </div>
+        <div></div>
       </form>
       <div
         className="trait-fileter-offcanvas offcanvas offcanvas-start"
@@ -142,8 +122,7 @@ export default function RarityComp() {
             name="trait_select_14"
             className="trait-select form-select mb-4"
           >
-            <option value="14_All">All</option>
-            <option value="14_None">None</option>
+            <option value="All">All</option>
             <option value="14_alien">alian</option>
           </select>
           <h4>shirts</h4>
@@ -152,7 +131,7 @@ export default function RarityComp() {
             className="trait-select form-select mb-4"
           >
             <option value="0_All">All</option>
-            <option value="0_None">None</option>
+
             <option value="0_BrownJacket">BrownJacket</option>
           </select>
           <h4>glasses</h4>
@@ -183,49 +162,56 @@ export default function RarityComp() {
           <br />
 
           <h3 className="mb-4">Total: 250</h3>
-          <div className="row " style={{ display: "flex" }}>
-            {loading == false &&
-              list?.content.map((item, i) => (
-                <div
-                  className=" punks col-md-3 col-sm-6 col-xs-12"
-                  key={i}
-                  loading="lazy"
-                >
+          <div>
+            <div
+              className="row punks"
+              style={{ display: "flex", flexWrap: "wrap" }}
+            >
+              {loading == false &&
+                list?.content.map((item, i) => (
                   <div
                     className="col-lg-3 col-md-4 col-sm-6 col-6 mb-5"
+                    key={i}
+                    loading="lazy"
                     style={{ paddingLeft: "30px", paddingRight: "30px" }}
                   >
                     <a
-                      href="https://www.sirfbazar.com//WomenRise/8603"
+                      href={`/item-detail/${item._id}`}
                       style={{ textDecoration: "none" }}
                     >
                       <div>
                         <img
                           className="punk-avatar"
                           style={{ borderRadius: "10px" }}
-                          src={item.thumbnail}
+                          src={item.image}
                           alt={item.name}
                         />
                         <div className="punk-info text-center">
                           <br />
                           <span>{item.name} </span>
                           <br />
-                          <svg
-                            viewBox="0 0 128 20"
-                            style={{ transform: "scale(1.15)" }}
-                          >
-                            <path
-                              d="M18.659464617674463 5.886049064536063L104.37818072626806 10.101969738149581L113.93276709105373 19.132353769878222L21.88176277928382 18.182120128591457L18.659464617674463 5.886049064536063Z"
-                              style={{ fill: "black" }}
-                            />
-                          </svg>
                         </div>
                       </div>
                     </a>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
+
+            {!loading && list.content.length === 0 && (
+              <div
+                className="text-center text-black"
+                style={{
+                  color: "#000",
+                  fontSize: "large",
+                  fontFamily: "inherit",
+                }}
+              >
+                {" "}
+                No Data Available With Selected Category
+              </div>
+            )}
           </div>
+
           {/* <div className="row" style={{ overflowX: "auto", overflowY: "hidden" }}>
           <nav
             aria-label="Page navigation"

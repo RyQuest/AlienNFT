@@ -358,7 +358,7 @@ a:hover .punk-info svg:not(.shadow) {
 
 .rarity-score-block {
   padding: 10px;
-  background-color: #ffa900;
+  background-color: #0a1e28;
   border-radius: 10px;
 }
 
@@ -413,7 +413,7 @@ a:hover .punk-info svg:not(.shadow) {
 }
 
 .view-on-block {
-  background-color: var(--primary-dark);
+  background-color: #0c98d7;
   border-radius: 10px;
   color: var(--white);
   font-size: var(--font-size-lg);
