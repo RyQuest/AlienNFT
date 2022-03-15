@@ -60,12 +60,12 @@ export default function ItemDetail() {
                 style={{ paddingLeft: "30px", paddingRight: "30px" }}
               >
                 <div>
-                  <h3 className="punk-rank">Rank #1</h3>
+                  {/* <h3 className="punk-rank">Rank #1</h3> */}
                   <div className="image-container">
                     <img
                       className="punk-avatar"
                       style={{ borderRadius: "10px" }}
-                      src={itemDetail?.content.image}
+                      src={itemDetail?.content.image_url}
                       alt={itemDetail?.content.name}
                     />
                   </div>
@@ -78,7 +78,7 @@ export default function ItemDetail() {
                 <div className="rarity-score-block">
                   <a
                     className="view-on-link"
-                    href="https://rarible.com/token/0x7f7685b4CC34BD19E2B712D8a89f34D219E76c35:6280"
+                    href={itemDetail?.content.permalink}
                     target="_blank"
                   >
                     <div className="view-on-block text-center">

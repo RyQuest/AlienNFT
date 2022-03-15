@@ -183,7 +183,7 @@ export default function RarityComp() {
                         <img
                           className="punk-avatar"
                           style={{ borderRadius: "10px" }}
-                          src={item.image}
+                          src={item.image_url}
                           alt={item.name}
                         />
                         <div className="punk-info text-center">

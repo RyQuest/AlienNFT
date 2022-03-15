@@ -208,7 +208,7 @@ export default function Header() {
           </div>
         </nav>
         <h4 className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-custom-font u-font-raleway u-headline u-text u-text-black u-text-1">
-          <a href="/">ALIANS NFT </a>
+          <a href="/">ALIENS NFT </a>
         </h4>
         <div
           className="u-align-center-xs u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xl u-image u-image-circle u-preserve-proportions u-image-1"
