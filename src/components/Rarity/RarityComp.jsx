@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 
+const filter_url = "http://13.234.110.216:3001/users/trait-filter";
+
 const url = "http://13.234.110.216:3001/users/content";
 
 export default function RarityComp() {
   const [catagory, setCatagory] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [unique, setUnique] = useState();
+  const [traitFilter, setTraitFilter] = useState();
 
   const [collectionData, setCollectionData] = useState({
     list: [],
@@ -37,7 +40,8 @@ export default function RarityComp() {
     setCollectionData({ ...collectionData, loading: true });
     getData(1, 250, catagory, sortBy);
   }, [catagory, sortBy]);
-  console.log(",,,,,,", catagory);
+  // console.log(",,,,,,", catagory);
+
   return (
     <div
       className=""
@@ -54,29 +58,36 @@ export default function RarityComp() {
         color: "white",
       }}
     >
-      <form className="search text-center" action="/search-result">
-        <fieldset style={{ border: "0" }}>
-          <input
-            className="search-text-input"
-            type="text"
-            name="search"
-            placeholder="Search by ID..."
-            defaultValue=""
-          />
-          <button type="submit" aria-label="Search">
-            <svg width={24} height={24} viewBox="0 0 512 512" className="icon">
-              <path
-                fill="rgb(255,255,255)"
-                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-              ></path>
-            </svg>
-          </button>
-        </fieldset>
-        <footer>
-          <button type="submit">Search</button>
-        </footer>
+      <form className="search text-center d-none" action="/search-result">
+        <div className="d-none">
+          <fieldset style={{ border: "0" }}>
+            <input
+              className="search-text-input"
+              type="text"
+              name="search"
+              placeholder="Search by ID..."
+              defaultValue=""
+            />
+            <button type="submit" aria-label="Search">
+              <svg
+                width={24}
+                height={24}
+                viewBox="0 0 512 512"
+                className="icon"
+              >
+                <path
+                  fill="rgb(255,255,255)"
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                ></path>
+              </svg>
+            </button>
+          </fieldset>
+          <footer>
+            <button type="submit">Search</button>
+          </footer>
+        </div>
         <a
-          className="trait-fileter-btn btn btn-primary"
+          className="trait-fileter-btn btn btn-primary "
           data-bs-toggle="offcanvas"
           href="https://www.sirfbazar.com/#traitFilterOffcanvas"
           role="button"
@@ -84,7 +95,7 @@ export default function RarityComp() {
         >
           Trait Filter (<span id="trait-fileter-selected-num">0</span>)
         </a>
-        <div>
+        <div className="d-none">
           <select
             id="sorting-select"
             className="form-select"
@@ -100,7 +111,7 @@ export default function RarityComp() {
         <div></div>
       </form>
       <div
-        className="trait-fileter-offcanvas offcanvas offcanvas-start"
+        className="trait-fileter-offcanvas offcanvas offcanvas-start "
         tabIndex={-1}
         id="traitFilterOffcanvas"
         aria-labelledby="traitFilterOffcanvasLabel"
@@ -161,7 +172,7 @@ export default function RarityComp() {
           <br />
           <br />
 
-          <h3 className="mb-4">Total: 250</h3>
+          <h3 className="mb-4">Total: {list.total}</h3>
           <div>
             <div
               className="row punks"

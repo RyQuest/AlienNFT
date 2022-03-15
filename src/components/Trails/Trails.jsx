@@ -36,71 +36,71 @@ export default function Trails() {
                   Backgrounds
                 </td>
                 <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-2">
-                  125
+                  7
                   <span style={{ fontWeight: 400 }}>
                     <span style={{ fontSize: "1rem" }} />
                   </span>
                 </td>
-                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-3">
+                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-3 d-none">
                   Clothes
                 </td>
-                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-4">
+                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-4 d-none">
                   80
                 </td>
               </tr>
               <tr style={{ height: "38px" }}>
                 <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-5">
-                  Skins
+                  Glasses
                 </td>
                 <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-6">
-                  39
+                  7
                 </td>
-                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-7">
+                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-7 d-none">
                   Badges
                 </td>
-                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-8">
+                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-8 d-none">
                   7
                 </td>
               </tr>
               <tr style={{ height: "38px" }}>
                 <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-9">
-                  Makeup
+                  character
                 </td>
                 <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-10">
-                  24
+                  1
                 </td>
-                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-11">
+                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-11 d-none">
                   Accessories
                 </td>
-                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-12">
+                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-12 d-none">
                   32
                 </td>
               </tr>
               <tr style={{ height: "38px" }}>
                 <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-13">
-                  Eyes
+                  Hats
                 </td>
                 <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-14">
-                  22
+                  7
                 </td>
-                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-15">
+                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-15 d-none">
                   Lips
                 </td>
-                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-16">
+                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-16 d-none">
                   17
                 </td>
               </tr>
               <tr style={{ height: "38px" }}>
                 <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-17">
-                  Hair
+                  Shirts
                 </td>
                 <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-18">
-                  82
+                  7
                 </td>
-                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-19">
+                <td className="u-align-left u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-19 d-none">
                   Scarfs
                 </td>
-                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-20">
+                <td className="u-align-right u-custom-color-2 u-custom-font u-table-cell u-text-font u-text-white u-table-cell-20 d-none">
                   25
                 </td>
               </tr>
