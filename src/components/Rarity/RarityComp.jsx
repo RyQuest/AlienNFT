@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 
-const url = "http://13.234.110.216:3001//users/content";
+const url = "http://13.234.110.216:3001/users/content";
 
 export default function RarityComp() {
   const [catagory, setCatagory] = useState("");

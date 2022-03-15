@@ -5,7 +5,7 @@ import axios from "axios";
 import "../asset/css/Rarity.css";
 
 export default function ItemDetail() {
-  const url = "http://13.234.110.216:3001//users/content-detail";
+  const url = "http://13.234.110.216:3001/users/content-detail";
   const navigate = useNavigate();
   const { id } = useParams();
   const [itemDetail, setItemDetail] = useState();
