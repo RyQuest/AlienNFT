@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import React from "react";
+import "../asset/css/bootstrap.min.css";
 
 export default function SearchResult() {
-  const url = "http://13.234.110.216:3001/search";
+  const url = "http://localhost:3001/search";
 
   const SearchResult = () => {
     const { search } = useLocation();

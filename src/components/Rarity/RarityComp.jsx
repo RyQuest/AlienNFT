@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
+import "../../asset/css/bootstrap.min.css";
+import "../../asset/css/pagenation.css";
 
 const filter_url = "http://13.234.110.216:3001/users/trait-filter";
 
@@ -9,8 +11,9 @@ const url = "http://13.234.110.216:3001/users/content";
 export default function RarityComp() {
   const [catagory, setCatagory] = useState("");
   const [sortBy, setSortBy] = useState("");
-  const [unique, setUnique] = useState();
-  const [traitFilter, setTraitFilter] = useState();
+  // const [unique, setUnique] = useState();
+  // const [traitFilter, setTraitFilter] = useState();
+  const [currentPage, setCurretPage] = useState(1);
 
   const [collectionData, setCollectionData] = useState({
     list: [],
@@ -29,18 +32,51 @@ export default function RarityComp() {
     });
     console.log("data", res);
     setCollectionData({
+      ...collectionData,
       list: res.data.data,
       total: res.data.total,
       loading: false,
     });
   };
-  console.log(list);
+  console.log("...", list);
 
   useEffect(() => {
     setCollectionData({ ...collectionData, loading: true });
-    getData(1, 250, catagory, sortBy);
-  }, [catagory, sortBy]);
+    getData(currentPage, 48, catagory, sortBy);
+  }, [catagory, sortBy, currentPage]);
   // console.log(",,,,,,", catagory);
+
+  const pages = (() => {
+    console.log({ total: list?.total });
+    if (list?.total) {
+      return Array.from(
+        { length: Math.ceil(list?.total / 48) },
+        (_, i) => i + 1
+      );
+    }
+  })();
+  console.log({ pages });
+  const nextPage = () => {
+    setCurretPage((oldPage) => {
+      let nextPage = oldPage + 1;
+      if (nextPage > pages.length - 1) {
+        nextPage = 0;
+      }
+      return nextPage;
+    });
+  };
+  const prevPage = () => {
+    setCurretPage((oldPage) => {
+      let prevPage = oldPage - 1;
+      if (prevPage < 1) {
+        prevPage = pages.length;
+      }
+      return prevPage;
+    });
+  };
+
+  const handlePage = (page) => setCurretPage(page);
+  // console.log(currentPage);
 
   return (
     <div
@@ -58,17 +94,17 @@ export default function RarityComp() {
         color: "white",
       }}
     >
-      <form className="search text-center d-none" action="/search-result">
+      <form className="search text-center d-none " action="/search-result">
         <div className="d-none">
           <fieldset style={{ border: "0" }}>
             <input
               className="search-text-input"
               type="text"
               name="search"
-              placeholder="Search by ID..."
+              placeholder="Search by Name..."
               defaultValue=""
             />
-            <button type="submit" aria-label="Search">
+            <button type="submit">
               <svg
                 width={24}
                 height={24}
@@ -87,7 +123,7 @@ export default function RarityComp() {
           </footer>
         </div>
         <a
-          className="trait-fileter-btn btn btn-primary "
+          className="trait-fileter-btn btn btn-primary d-none "
           data-bs-toggle="offcanvas"
           href="https://www.sirfbazar.com/#traitFilterOffcanvas"
           role="button"
@@ -134,34 +170,49 @@ export default function RarityComp() {
             className="trait-select form-select mb-4"
           >
             <option value="All">All</option>
-            <option value="14_alien">alian</option>
+            <option value="alien">alian</option>
           </select>
           <h4>shirts</h4>
           <select
             name="trait_select_0"
             className="trait-select form-select mb-4"
           >
-            <option value="0_All">All</option>
+            <option value="All">All</option>
 
-            <option value="0_BrownJacket">BrownJacket</option>
+            <option value="Gold">Gold</option>
+            <option value="BlackJacket">BlackJacket</option>
+            <option value="DollarShirt">DollarShirt</option>
+            <option value="BrownJacket">BrownJacket</option>
+            <option value="OrangeShirt">OrangeShirt</option>
+            <option value="BlueSweater">BlueSweater</option>
+            <option value="transparant">Transparant</option>
           </select>
           <h4>glasses</h4>
           <select
             name="trait_select_12"
             className="trait-select form-select mb-4"
           >
-            <option value="12_All">All</option>
-            <option value="12_None">None</option>
-            <option value="12_Black">Black</option>
+            <option value="All">All</option>
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+            <option value="Yellow">Yellow</option>
+            <option value="transparant">Transparant</option>
+            <option value="VR">VR</option>
+            <option value="Pink">Pink</option>
           </select>
           <h4>hats</h4>
           <select
             name="trait_select_7"
             className="trait-select form-select mb-4"
           >
-            <option value="7_All">All</option>
-            <option value="7_None">None </option>
-            <option value="7_BowlerCaps">BowlerCaps</option>
+            <option value="All">All</option>
+            <option value="transparant">Transparant </option>
+            <option value="BowlerCaps">BowlerCaps</option>
+            <option value="YellowCaps">YellowCaps</option>
+            <option value="BlackCaps">BlackCaps</option>
+            <option value="cowboy">Cowboy</option>
+            <option value="RedCaps">RedCaps</option>
+            <option value="Dreadlock">Dreadlock</option>
           </select>
         </div>
       </div>
@@ -222,64 +273,37 @@ export default function RarityComp() {
               </div>
             )}
           </div>
-
-          {/* <div className="row" style={{ overflowX: "auto", overflowY: "hidden" }}>
-          <nav
-            aria-label="Page navigation"
-            className="mt-3 justify-content-center"
-            style={{
-              width: "auto",
-              maxWidth: "500px",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            <ul className="pagination">
-              <li className="page-item active">
-                <a className="page-link" href="https://www.sirfbazar.com/">
-                  1
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  className="page-link"
-                  href="https://www.sirfbazar.com//?search=&traits=&trait_normalization=0&order_by=rarity&page=2"
-                >
-                  2
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  className="page-link"
-                  href="https://www.sirfbazar.com//?search=&traits=&trait_normalization=0&order_by=rarity&page=3"
-                >
-                  3
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  className="page-link"
-                  href="https://www.sirfbazar.com//?search=&traits=&trait_normalization=0&order_by=rarity&page=4"
-                >
-                  4
-                </a>
-              </li>
-              <li className="page-item disabled">
-                <a className="page-link" href="https://www.sirfbazar.com/#">
-                  ...
-                </a>
-              </li>
-              <li className="page-item">
-                <a
-                  className="page-link"
-                  href="https://www.sirfbazar.com//?search=&traits=&trait_normalization=0&order_by=rarity&page=167"
-                >
-                  <span aria-hidden="true">»</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div> */}
+          {!loading && (
+            <div
+              className="row justify-content-center"
+              style={{ textAlign: "center" }}
+            >
+              <div className="btn-container">
+                <button className="prev-btn" onClick={prevPage}>
+                  prev
+                </button>
+                {pages &&
+                  pages.map((index) => {
+                    if (index === 1) {
+                      return (
+                        <button
+                          key={index}
+                          className={`page-btn ${
+                            index === currentPage ? "active-btn" : null
+                          }`}
+                          onClick={() => handlePage(index)}
+                        >
+                          {currentPage}
+                        </button>
+                      );
+                    }
+                  })}
+                <button className="next-btn" onClick={nextPage}>
+                  next
+                </button>
+              </div>
+            </div>
+          )}
         </main>
       </div>
 

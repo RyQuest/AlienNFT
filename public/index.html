@@ -49,6 +49,8 @@
   <script data-cfasync="false" src="/asset/js/email-decode.min.js" type="module"></script>
   <script src="/asset/js/rocket-loader.min.js" data-cf-settings="eebe603c52c76377a0680dc1-|49" type="module"
     defer=""></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW69Z04YTP"></script>
@@ -65,76 +67,10 @@
 
 
 
-  <!-- <script>
 
-    window.addEventListener('DOMContentLoaded', () => {
 
-      const traitSelects = document.querySelectorAll('.trait-select');
 
-      function getSelectedTraits() {
-        let selectedTraits = [];
-        traitSelects.forEach(function (traitSelect) {
-          if (!traitSelect.value.includes('_All')) {
-            selectedTraits.push(traitSelect.value);
-          }
-        });
-        return selectedTraits;
-      }
 
-      const sortingSelect = document.querySelector('#sorting-select');
-
-      if (sortingSelect) {
-        sortingSelect.addEventListener('change', async (event) => {
-          const sorting = event.target.value;
-          window.location = '/?search=&traits=&trait_normalization=0&order_by=' + sorting;
-        });
-      }
-
-      // const traitNormalizationSwitch = document.querySelector('#traitNormalization');
-      // if (traitNormalizationSwitch) {
-      //   traitNormalizationSwitch.addEventListener('change', async (event) => {
-      //     const useTraitNormalization = event.target.checked;
-      //     if (useTraitNormalization) {
-      //       window.location = '/?search=&traits=&trait_normalization=1&order_by=rarity';
-      //     } else {
-      //       window.location = '/?search=&traits=&trait_normalization=0&order_by=rarity';
-      //     }
-      //   });
-      // }
-      let isChanged = false;
-      if (traitSelects) {
-        traitSelects.forEach(function (traitSelect) {
-          traitSelect.addEventListener('change', async (event) => {
-            const traitSelectedValue = event.target.value;
-            let selectedNum = 0;
-            traitSelects.forEach(function (traitSelect) {
-              if (!traitSelect.value.includes('_All')) {
-                selectedNum = selectedNum + 1;
-              }
-            });
-            document.getElementById("trait-fileter-selected-num").innerHTML = selectedNum;
-            isChanged = true;
-          });
-        });
-      }
-      // const traitFilterOffcanvas = document.getElementById('traitFilterOffcanvas')
-      // traitFilterOffcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      //   if (traitSelects && isChanged) {
-      //     let selectedTraits = getSelectedTraits();
-      //     if (selectedTraits.length != 0) {
-      //       window.location = '/?search=&traits=' + selectedTraits.join(',') + '&trait_normalization=0&order_by=rarity';
-      //     } else {
-      //       window.location = '/?search=&trait_normalization=0&order_by=rarity';
-      //     }
-      //   }
-      // });
-    });
-  </script> -->
-  <script>
-    ('.message a').click(function () {
-      ('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
-    });
-  </script>
 </body>
 
 </html>

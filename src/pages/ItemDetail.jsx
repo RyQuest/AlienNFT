@@ -116,7 +116,7 @@ export default function ItemDetail() {
                   </div>
                   <div className="d-flex trait-value-block">
                     <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[0].value}
+                      {itemDetail?.content.attributes[2].value}
                     </div>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function ItemDetail() {
                   </div>
                   <div className="d-flex trait-value-block">
                     <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[2].value}
+                      {itemDetail?.content.attributes[0].value}
                     </div>
                   </div>
                 </div>
