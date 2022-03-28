@@ -135,6 +135,15 @@ export default function Header() {
                   Rarity
                 </a>
               </li>
+              <li className="u-nav-item">
+                <a
+                  className="u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-black u-text-grey-90 u-text-hover-grey-80"
+                  href="/create"
+                  style={{ padding: "10px 8px" }}
+                >
+                  Create
+                </a>
+              </li>
             </ul>
           </div>
           <div className="u-custom-menu u-nav-container-collapse">
@@ -199,6 +208,15 @@ export default function Header() {
                       style={{ padding: "10px 8px" }}
                     >
                       Rarity
+                    </a>
+                  </li>
+                  <li className="u-nav-item">
+                    <a
+                      className="u-button-style u-nav-link"
+                      href="/create"
+                      style={{ padding: "10px 8px" }}
+                    >
+                      Create
                     </a>
                   </li>
                 </ul>

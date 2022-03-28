@@ -64,12 +64,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
 
+  <script>
 
-
-
-
-
+    function dragNdrop(event) {
+      var fileName = URL.createObjectURL(event.target.files[0]);
+      var preview = document.getElementById("preview");
+      var previewImg = document.createElement("img");
+      previewImg.setAttribute("src", fileName);
+      preview.innerHTML = "";
+      preview.appendChild(previewImg);
+    }
+    function drag() {
+      document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
+    }
+    function drop() {
+      document.getElementById('uploadFile').parentNode.className = 'dragBox';
+    }
+  </script>
 
 </body>
 

@@ -11,6 +11,7 @@ import Header from "./components/Header/Header";
 // import "./asset/css/Licence.css";
 import "./asset/css/nicepage.css";
 import SearchResult from "./pages/SearchResult";
+import CreateNft from "./pages/CreateNft";
 
 // import "./asset/css/Rarity.css";
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/item-detail/:id" element={<ItemDetail />} />
         {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
         <Route path="/search-result" element={<SearchResult />} />
+        <Route path="/create" element={<CreateNft />} />
 
         <Route path="/*" element={<NotFound />} />
       </Routes>
