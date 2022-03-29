@@ -1,5 +1,4 @@
 import { web3 } from "./Web3Helper"
-// const web3 = ""
 export const BuyNFT=async(voucher)=>{
 
        const Web3= await web3();
