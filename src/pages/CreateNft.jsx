@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../asset/css/custom-NFT.css";
 import { ipfsMint } from "../helpers/ipfs";
 import { Mint } from "../helpers/Mint";
 import { BuyNFT } from "../helpers/BuyNFT";
 import { ToastContainer } from "react-toastify";
 import upload_img from "../asset/images/upload.png";
-import Az from "../asset/images/Azkari.png";
 
 export default function CreateNft() {
+  const url = "http://13.234.110.216:3001/users/add-content";
   const [noOfRows, setNoOfRows] = useState(1);
   const [photoUrl, setPhotoUrl] = useState(null);
   const [contentImage, setContentImage] = useState(null);
+
   const [formData, setFormData] = useState({
     title: "",
     price: "",
@@ -18,7 +20,40 @@ export default function CreateNft() {
     file: "",
   });
 
+  const [createFormData, setCreateFormData] = useState({
+    name: "",
+    description: "",
+    image_url: "",
+    image_url_thumbnai: "",
+    image_url_preview: "",
+    token_id: "",
+    status: "approved",
+  });
+
   const { file, title, price, description } = formData;
+  const {
+    name,
+    descrip,
+    image_url,
+    image_url_thumbnai,
+    image_url_preview,
+    token_id,
+    status,
+  } = createFormData;
+  const handleCreateFormInput = (e) =>
+    setFormData({ ...createFormData, [e.target.name]: e.target.value });
+
+  // const formCreateSubmitHandler = async (e) => {
+  //   e.preventDefault();
+  //   const response = await axios.post(url, {
+  //     name: title,
+  //     image_url: state,
+  //     image_url_thumbnai,
+  //     image_url_preview,
+  //     token_id,
+  //     status,
+  //   });
+  // };
   const handleFile = (e) => {
     const { files } = e.target;
 
@@ -67,6 +102,7 @@ export default function CreateNft() {
     const redeem = await BuyNFT(voucher);
     console.log("redeem", redeem);
   };
+
   return (
     <section
       className=" trending-bew-sec"
