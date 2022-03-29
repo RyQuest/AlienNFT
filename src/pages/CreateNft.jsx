@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../asset/css/custom-NFT.css";
 import { ipfsMint } from "../helpers/ipfs";
 import { Mint } from "../helpers/Mint";
+import { BuyNFT } from "../helpers/BuyNFT";
 import { ToastContainer } from "react-toastify";
 import upload_img from "../asset/images/upload.png";
 
@@ -53,10 +54,16 @@ export default function CreateNft() {
     e.preventDefault();
 
     const DataObj = { name: title, price: price, description: description };
-    const hash = await ipfsMint(contentImage, DataObj);
+    // const hash = await ipfsMint(contentImage, DataObj);
+    const hash = await ipfsMint(upload_img, DataObj);
+    console.log("ipfshash", hash);
 
     const voucher = await Mint(hash, price);
     console.log("voucher", voucher);
+
+    const redeem = BuyNFT(voucher)
+    console.log("redeem", redeem);
+
   };
   return (
     <section
