@@ -4,8 +4,10 @@ import "../asset/css/custom-NFT.css";
 import { ipfsMint } from "../helpers/ipfs";
 import { Mint } from "../helpers/Mint";
 import { BuyNFT } from "../helpers/BuyNFT";
-import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import upload_img from "../asset/images/upload.png";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function CreateNft() {
   const url = "http://13.234.110.216:3001/users/add-content";
@@ -43,17 +45,6 @@ export default function CreateNft() {
   const handleCreateFormInput = (e) =>
     setFormData({ ...createFormData, [e.target.name]: e.target.value });
 
-  // const formCreateSubmitHandler = async (e) => {
-  //   e.preventDefault();
-  //   const response = await axios.post(url, {
-  //     name: title,
-  //     image_url: state,
-  //     image_url_thumbnai,
-  //     image_url_preview,
-  //     token_id,
-  //     status,
-  //   });
-  // };
   const handleFile = (e) => {
     const { files } = e.target;
 
@@ -93,7 +84,9 @@ export default function CreateNft() {
     const hash = await ipfsMint(contentImage, DataObj);
     // const hash = await ipfsMint(Az, DataObj);
     console.log("ipfshash", hash);
-    const state = hash.replace("https://gateway.ipfs.io/ipfs/", "");
+    const img_url = hash.hash.path;
+    console.log(img_url);
+    const state = hash.contentUrl.replace("https://gateway.ipfs.io/ipfs/", "");
     console.log("state", state);
 
     const voucher = await Mint(state, price);
@@ -101,6 +94,20 @@ export default function CreateNft() {
 
     const redeem = await BuyNFT(voucher);
     console.log("redeem", redeem);
+
+    const response = await axios.post(url, {
+      name: title,
+      description: description,
+      image_url: img_url,
+      image_url_thumbnail: img_url,
+      image_url_preview: img_url,
+      token_id: voucher.tokenId,
+      status,
+    });
+    console.log("response", response);
+    toast.success("Minting Successful", {
+      position: "top-center",
+    });
   };
 
   return (
@@ -131,7 +138,10 @@ export default function CreateNft() {
                 <div className="col-md-12">
                   <div className="contact-form collection-box-new">
                     <div className>
-                      <div className="form-group">
+                      <div
+                        className="form-group"
+                        style={{ marginBottom: "20px" }}
+                      >
                         <div className="uploadOuter">
                           <span className="dragBox upload-NFT-box create-upload-box">
                             <input
@@ -182,7 +192,7 @@ export default function CreateNft() {
                         />
                       </div>
 
-                      <div className="form-group">
+                      <div className="form-group d-none">
                         <label>Category</label>
                         <div className="row" scope="row">
                           {[...Array(noOfRows)].map((elementInArray, index) => {
@@ -224,7 +234,10 @@ export default function CreateNft() {
                           {/* </button> */}
                         </div>
                       </div>
-                      <div className="form-group" style={{ marginTop: "20px" }}>
+                      <div
+                        className="form-group d-none"
+                        style={{ marginTop: "20px" }}
+                      >
                         <label>Supply</label>
                         <input
                           type="text"

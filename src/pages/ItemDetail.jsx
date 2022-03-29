@@ -103,75 +103,152 @@ export default function ItemDetail() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <h3
-                        className="trait-type"
-                        style={{ fontSize: "1.50rem" }}
-                      >
-                        Character
-                      </h3>
+                {itemDetail && itemDetail?.content?.attributes.length > 0 && (
+                  <>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Character
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          {itemDetail?.content.attributes[2].value}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="d-flex trait-value-block">
-                    <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[2].value}
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Shirts
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          {itemDetail?.content.attributes[1].value}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <h3
-                        className="trait-type"
-                        style={{ fontSize: "1.50rem" }}
-                      >
-                        Shirts
-                      </h3>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Glasses
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          {itemDetail?.content.attributes[0].value}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="d-flex trait-value-block">
-                    <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[1].value}
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <h3
-                        className="trait-type"
-                        style={{ fontSize: "1.50rem" }}
-                      >
-                        Glasses
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="d-flex trait-value-block">
-                    <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[0].value}
-                    </div>
-                  </div>
-                </div>
 
-                <div className="mt-4">
-                  <div className="row">
-                    <div className="col-6">
-                      <h3
-                        className="trait-type"
-                        style={{ fontSize: "1.50rem" }}
-                      >
-                        Hats
-                      </h3>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Hats
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          {itemDetail?.content.attributes[3].value}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="d-flex trait-value-block">
-                    <div className="flex-grow-1 trait-value">
-                      {itemDetail?.content.attributes[3].value}
+                  </>
+                )}
+                {itemDetail && itemDetail?.content?.attributes.length === 0 && (
+                  <>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Attribute 1
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          Value not Submitted
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Attribute 2
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          Value not Submitted
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Attribute 3
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          Value not Submitted
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4">
+                      <div className="row">
+                        <div className="col-6">
+                          <h3
+                            className="trait-type"
+                            style={{ fontSize: "1.50rem" }}
+                          >
+                            Attribute 4
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="d-flex trait-value-block">
+                        <div className="flex-grow-1 trait-value">
+                          Value not Submitted
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
