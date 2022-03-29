@@ -5,6 +5,7 @@ import { Mint } from "../helpers/Mint";
 import { BuyNFT } from "../helpers/BuyNFT";
 import { ToastContainer } from "react-toastify";
 import upload_img from "../asset/images/upload.png";
+import Az from "../asset/images/Azkari.png";
 
 export default function CreateNft() {
   const [noOfRows, setNoOfRows] = useState(1);
@@ -54,16 +55,17 @@ export default function CreateNft() {
     e.preventDefault();
 
     const DataObj = { name: title, price: price, description: description };
-    // const hash = await ipfsMint(contentImage, DataObj);
-    const hash = await ipfsMint(upload_img, DataObj);
+    const hash = await ipfsMint(contentImage, DataObj);
+    // const hash = await ipfsMint(Az, DataObj);
     console.log("ipfshash", hash);
+    const state = hash.replace("https://gateway.ipfs.io/ipfs/", "");
+    console.log("state", state);
 
-    const voucher = await Mint(hash, price);
+    const voucher = await Mint(state, price);
     console.log("voucher", voucher);
 
-    const redeem = BuyNFT(voucher)
+    const redeem = await BuyNFT(voucher);
     console.log("redeem", redeem);
-
   };
   return (
     <section
