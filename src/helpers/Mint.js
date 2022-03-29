@@ -416,15 +416,44 @@ export const Mint = async (tokenUrl, minPrice) => {
     let accounts = await window.ethereum.enable();
     console.log("accounts", accounts);
     console.log("ready to go!");
-    voucher.address = accounts[0];
-
+    const address = accounts[0];
+    console.log("address", address);
     const lazyminter = new LazyMinter({ contract, signer });
 
-    voucher.voucher = await lazyminter.createVoucher(token, tokenUrl, minPrice);
-
+    voucher = await lazyminter.createVoucher(token, tokenUrl, minPrice);
+    console.log(lazyminter);
     console.log(voucher);
+    const nonce = await Web3.eth.getTransactionCount(address, "latest");
+
+    let estimates_gas = await Web3.eth.estimateGas({
+      from: address,
+      to: contractAddress,
+      value: Web3.utils.toHex(Web3.utils.toWei("0", "wei")),
+      data: nftcontract.methods.redeem(address, voucher).encodeABI(),
+    });
+
+    //  console.log("hhhh", tokenId, uri, minPrice, signature);
+
+    let gasLimit = Web3.utils.toHex(estimates_gas * 2);
+    let gasPrice_bal = await Web3.eth.getGasPrice();
+    let gasPrice = Web3.utils.toHex(gasPrice_bal * 2);
+
+    const tx = {
+      from: address,
+      to: contractAddress,
+      nonce: nonce,
+      gasPrice: gasPrice,
+      gasLimit: gasLimit,
+      value: Web3.utils.toHex(Web3.utils.toWei("0", "wei")),
+      //'maxPriorityFeePerGas': 1999999987,
+      data: nftcontract.methods.redeem(address, voucher).encodeABI(),
+    };
+
+    let hash = await Web3.eth.sendTransaction(tx);
+    console.log("..", hash);
+    return hash;
   } else {
   }
 
-  return voucher;
+  //   return voucher;
 };
